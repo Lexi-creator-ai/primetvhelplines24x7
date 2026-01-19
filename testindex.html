@@ -78,77 +78,146 @@
             margin-bottom: 25px;
             font-size: 2.1em;
         }
+        h3 {
+            color: var(--amazon-dark);
+            margin-top: 30px;
+        }
+        .disclaimer {
+            font-weight: bold;
+            color: #c62828;
+            background-color: #ffebee;
+            padding: 12px 18px;
+            border-radius: 6px;
+            margin: 20px 0;
+            border-left: 5px solid #c62828;
+        }
+        ol, ul, dl {
+            margin-left: 30px;
+            margin-bottom: 20px;
+        }
+        dt {
+            font-weight: bold;
+            margin-top: 15px;
+            color: var(--amazon-blue);
+        }
+        .phone-number {
+            font-size: 2.2em;
+            font-weight: bold;
+            color: var(--amazon-orange);
+            text-align: center;
+            margin: 25px 0;
+            padding: 15px;
+            background-color: #fff3e0;
+            border-radius: 8px;
+            display: inline-block;
+            width: 100%;
+            max-width: 400px;
+        }
+        footer {
+            background-color: var(--amazon-dark);
+            color: var(--white);
+            padding: 50px 20px 30px;
+            text-align: center;
+            margin-top: 80px;
+        }
+        footer a {
+            color: var(--amazon-orange);
+            text-decoration: none;
+            margin: 0 18px;
+            font-weight: bold;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+        footer section {
+            background: none;
+            box-shadow: none;
+            border: none;
+            color: var(--white);
+            margin: 35px 0;
+            padding: 0;
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        footer h3 {
+            color: var(--amazon-orange);
+            font-size: 1.5em;
+            margin-bottom: 18px;
+        }
+        footer p {
+            margin: 12px 0;
+        }
+
+        /* Added minimal styles only for the registration form to fit naturally (no color/theme change) */
         .registration-form {
             text-align: center;
-            max-width: 500px;
-            margin: 0 auto 40px auto;
+            margin-bottom: 60px;
+        }
+        .registration-form img {
+            max-width: 180px;
+            margin-bottom: 20px;
         }
         .registration-form input[type="text"] {
-            width: 100%;
-            padding: 14px;
-            font-size: 1.3em;
+            width: 80%;
+            max-width: 400px;
+            padding: 12px;
+            font-size: 1.2em;
             margin: 15px 0;
             border: 2px solid var(--amazon-blue);
             border-radius: 6px;
-            box-sizing: border-box;
         }
         .registration-form a {
             display: inline-block;
             background-color: var(--amazon-orange);
             color: white;
-            padding: 14px 30px;
-            font-size: 1.3em;
+            padding: 12px 40px;
+            font-size: 1.2em;
             font-weight: bold;
             text-decoration: none;
             border-radius: 6px;
-            transition: background 0.3s;
+            margin-top: 10px;
         }
-        .registration-form a:hover {
-            background-color: #e68a00;
+        .registration-form p {
+            font-size: 1.1em;
+            margin: 10px 0;
         }
-        .prime-logo {
-            max-width: 180px;
-            margin-bottom: 20px;
-        }
-        /* Rest of your original styles can be added here if needed */
     </style>
 </head>
 <body>
-
     <header>
         <h1>Amazon Prime TV Helpline & Support</h1>
         <p class="disclaimer">This is an INDEPENDENT third-party support service provided by Prime Experts Helpline 24x7. We are NOT affiliated with Amazon.com, Inc., Prime Video, or any Amazon brands. All trademarks, logos, and names are the property of their respective owners.</p>
     </header>
-
     <nav>
         <a href="#about">About Us</a>
         <a href="#activation">Activation Steps</a>
         <a href="#faq">FAQ</a>
         <a href="#contact">Contact Support</a>
     </nav>
-
     <main>
 
-        <!-- Registration form placed at the very top -->
-        <section class="registration-form">
-            <img src="images/prime-logo.png" alt="Prime Video" class="prime-logo">
-            <h2>Register Your Compatible TV or Device</h2>
-            <p>Enter the registration code shown on your TV or device screen to link it with your Prime account.</p>
-            
-            <input type="text" name="code" placeholder="e.g. HQ2W4Z">
-            <a href="new/code.html">Register Device</a>
-            
-            <p style="margin-top: 20px; font-size: 0.95em; color: #555;">
-                Don't see a code? Follow the steps below or call our helpline for assistance.
-            </p>
-        </section>
+        <!-- Registration form on top – exact original structure preserved, just styled to fit -->
+        <div class="registration-form">
+            <img src="images/prime-logo.png" alt="#" />
+            <h2>Register your compatible TV or devices</h2>
+            <p>Enter the shown on your TV or device to register it with your Prime account</p>
+            <div>
+                <label style="font-size:17px; font-weight:500; color:#000000; display:block; margin-bottom:10px;">
+                    <b>Registration :</b>
+                </label>
+                <input type="text" name="code" placeholder="e.g. HQ2W4Z">
+                <a href="new/code.html">Register Device</a>
+                <span class="message" id="msgcode" style="display:block; margin-top:10px; color:red;"></span>
+            </div>
+        </div>
 
+        <!-- Now the whole original website content starts right below -->
         <section id="about">
             <h2>About Prime Experts Helpline 24x7</h2>
             <p>Prime Experts Helpline 24x7 is a completely independent support provider specializing in helping users resolve common issues with Amazon Prime Video on TVs and streaming devices. We offer round-the-clock phone assistance for activation, troubleshooting, and basic guidance.</p>
             <p>We operate as a separate entity with no affiliation, partnership, or endorsement from Amazon or Prime Video. Our goal is to provide helpful, unbiased support based on publicly available information and common user experiences.</p>
         </section>
-
         <section id="activation">
             <h2>Steps to Activate Prime Video on Your TV</h2>
             <p>Here are the standard steps to register and activate Prime Video on most smart TVs, Roku, Fire TV, or other streaming devices. If you run into any trouble, our team is available 24/7 at the number below.</p>
@@ -157,14 +226,13 @@
                 <li>Launch the Prime Video application on your TV/device.</li>
                 <li>Select "Sign in" or the registration option (avoid typing credentials directly on TV if possible).</li>
                 <li>Choose the option to get an activation/registration code (usually 5-6 characters) displayed on screen.</li>
-                <li>On a phone, tablet, or computer, visit the official site: <a href="https://www.amazon.com/code" target="_blank" rel="noopener noreferrer">amazon.com/code</a> or <a href="https://www.primevideo.com/mytv" target="_blank" rel="noopener noreferrer">primevideo.com/mytv</a></li>
+                <li>On a phone, tablet, or computer, visit the official site: <a href="https://www.amazon.com/gp/video/ontv/code" target="_blank" rel="noopener noreferrer">amazon.com/code</a> or <a href="https://www.primevideo.com/mytv" target="_blank" rel="noopener noreferrer">primevideo.com/mytv</a></li>
                 <li>Sign in to your Amazon account.</li>
                 <li>Enter the code shown on your TV screen and submit.</li>
                 <li>Your device should activate within seconds. Enjoy streaming!</li>
             </ol>
             <p class="disclaimer">Always use the official Amazon website for code entry. We provide phone guidance only and never ask for passwords, payment info, or remote access.</p>
         </section>
-
         <section id="faq">
             <h2>Frequently Asked Questions</h2>
             <dl>
@@ -174,23 +242,21 @@
                 <dd>Usually caused by slow internet, Wi-Fi interference, outdated app, or device cache. Restart router/device, or call us for more tips.</dd>
                 <dt>Is this an official Amazon support line?</dt>
                 <dd>No — we are an independent helpline. For official support, visit amazon.com/help or use Prime Video app settings.</dd>
-                <dt>Do we charge for support?</dt>
+                <dt>Do you charge for support?</dt>
                 <dd>Basic phone guidance is free. Some extended/premium sessions may have fees — see our Refund Policy below.</dd>
                 <dt>How do I update the Prime Video app?</dt>
                 <dd>Go to your device's app store, search for Prime Video, and select Update if available.</dd>
             </dl>
         </section>
-
         <section id="contact">
             <h2>Contact Our Support Team</h2>
             <p>For fast help with activation, errors, or any Prime Video TV issue, call our 24/7 helpline:</p>
             <div class="phone-number">+1-888-766-1625</div>
             <p>We offer expert phone support. This is an independent service — official Amazon support is available directly through their website.</p>
-            <p>For detailed activation code troubleshooting, call the number above.</p>
+            <p>For detailed activation code troubleshooting, <a href="code.html">click here</a> or simply call the number above.</p>
         </section>
 
     </main>
-
     <footer>
         <p><strong>Prime Experts Helpline 24x7</strong> — Independent Support Service</p>
         <p class="disclaimer">Not affiliated with Amazon, Prime Video, or any related entities.</p>
@@ -217,6 +283,5 @@
         </section>
         <p>© 2026 Prime Experts Helpline 24x7. All rights reserved.</p>
     </footer>
-
 </body>
 </html>
